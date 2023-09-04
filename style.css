@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-de-fundo: #00030C;
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --fonte-principal: 'inter';
+}
+
+/* peso da fonte: font-weight(regular,bold,...)  tamanho da fonte: font-size  font-family: familia da fonte.
+cada elemnto tem sua propria fonte, mas é bom ver os elementos que tem fontes em comum, e colocar no principal,ou seja, no body, e depois é só ir ajeitando nas classes. */
+body{
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.principal{
+    /* as imagens colocadas no background-image são decorativas, se forem importante para a leitura, colocar no html dentro da tag img */
+    background-image: url(img/Background.png);
+    background-repeat: no-repeat;
+    background-size: contain ;
+    
+}
+/* ver como funciona certin o grid, e quando usar */
+/* boas praticas: colocar no container tudo aquilo que for de posicionamento, e no principal, tudo aquilo que for de estilização. Assim fica mais organizado  */
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    text-align: center;
+    
+}
+/* por que o aling-itens não foi aqui? pq a section engloba a imagem também, então não faria sentido */
+.container__caixa{
+    margin: 0 6em;
+
+}
+
+.titulo__principal{
+    font-size: 28px;
+    font-weight: 700;
+   
+}
+
+.container__botao{
+    background-color: var(--botao-azul);
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display:block;
+    margin-bottom: 1em;
+
+    
+}
+
+.botao_secundario{
+    background-color: transparent;
+    border: solid 2px var(--branco-principal);
+}
+
+.legenda__botao{
+    color: var(--cinza-secundario);
+    font-size: 12px;
+}
+
+.container__imagem{
+    margin: 1em 0 2em 0;
+}
+
+.secundario{
+    align-items: center;
+    margin: 0 5.7em;
+}
+.secundario__imagem{
+    width: 80%;
+    margin-left: 4em;
+}
+
+.secundario__caixa{
+    text-align: left;
+
+}
+
+.secundario__descricao{
+    margin-bottom: 0.1em;
+    font-size: 37px;
+    font-weight: 700;
+    color: var(--branco-principal);
+}
+
+.secundario__texto{
+    color: var(--cinza-secundario);
+
+}
+
+.secundario__botao{
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.secundario__texto{
+    padding-right: 3em;
+}
+
+.dispositivos{
+    text-align: center;
+}
+
+.dispositivos__titulo{
+    font-weight: 700;
+    font-size: 42px;
+    color: var(--branco-principal);
+
+}
+/* nenhum estilo na lista (list-style-type) */
+.dispositivos__lista{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 4em 0;
+}
+
+.dispositivos__lista_item{
+    font-size: 28px;
+    color: var(--branco-principal);
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+
